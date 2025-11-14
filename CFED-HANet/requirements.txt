@@ -4,5 +4,5 @@ scikit_learn==1.5.1
 torch==2.2.1
 tqdm==4.59.0
 transformers==4.40.2
-
+protobuf==3.20.0
 # Different CUDA versions may influence the final results, our experiments are performed on CUDA 11.6.
