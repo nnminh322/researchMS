@@ -13,8 +13,8 @@ import os
 token_1 = os.getenv("token_1")
 token_2 = os.getenv("token_2")
 token_3 = os.getenv("token_3")
-endpoint = "https://models.github.ai/inference"
-model_name = "openai/gpt-4o"
+endpoint = os.getenv("endpoint")
+model_name = os.getenv("model_name")
 
 client_1 = OpenAI(
     base_url=endpoint,
