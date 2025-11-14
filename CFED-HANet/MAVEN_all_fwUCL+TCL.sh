@@ -1,4 +1,3 @@
-source activate zhangchenlong
 for i in 1 2 5 10
 do
     for j in 5 10
