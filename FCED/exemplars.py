@@ -88,13 +88,15 @@ def api_call(input_prompt: str):
                     }
                 ]
             )
-            print(f"-----Call api with request: {input_prompt}-----\n")
+            print(f"-----Successfully call api with response: {completion}-----\n")
+            
             content = completion.choices[0].message.content
-            # content = "[" + content.split("[")[-1].split("]")[0] + "]"
-            content = '["' + content.split("[")[-1].split("]")[0] + '"]'
+            content = "[" + content.split("[")[-1].split("]")[0] + "]"
+            # content = '["' + content.split("[")[-1].split("]")[0] + '"]'
             return json.loads(content)
         
-        except:
+        except Exception as e:
+            print(f"error: {e} while call api at iter {i}")
             continue
     raise Exception("Error: Retried 3 times!")
 
