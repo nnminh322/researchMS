@@ -10,27 +10,19 @@ import json
 import itertools
 import os
 
-token_1 = os.getenv("token_1")
-token_2 = os.getenv("token_2")
-token_3 = os.getenv("token_3")
+list_client = []
+num_token = os.get("num_tokens")
 endpoint = os.getenv("endpoint")
 model_name = os.getenv("model_name")
-
-client_1 = OpenAI(
-    base_url=endpoint,
-    api_key=token_1,
-)
-client_2 = OpenAI(
-    base_url=endpoint,
-    api_key=token_2,
-)
-client_3= OpenAI(
-    base_url=endpoint,
-    api_key=token_3,
-)
-
-client_list = [client_1, client_2, client_3]
-client = client_list*len(client_list)
+for i in range(num_token):
+    name_var_env = f"token_{i+1}"
+    token = os.getenv(name_var_env)
+    client_instance = OpenAI(
+        base_url=endpoint,
+        api_key=token,
+    )
+    list_client.append(client_instance)
+client = list_client*len(list_client)
 
 args = parse_arguments()
 tokenizer = AutoTokenizer.from_pretrained(args.backbone)
