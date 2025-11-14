@@ -43,7 +43,8 @@ do
                             --aug-dropout-times 0 \
                             --sam \
                             --sam-type current \
-                            --rho 0.05
+                            --rho 0.05 \
+                            --llm-augment true
                     done
                 done
             done
