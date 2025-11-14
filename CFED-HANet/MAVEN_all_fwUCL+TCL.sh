@@ -19,7 +19,7 @@ do
                             --no-freeze-bert \
                             --shot-num $j \
                             --batch-size 4 \
-                            --device cuda:4 \
+                            --device cuda:0 \
                             --log \
                             --log-dir ./outputs/log_incremental/temp7_submax/first_wo_UCL+TCL/ \
                             --log-name a${k}_l${l}_r${i} \
