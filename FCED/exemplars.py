@@ -14,7 +14,7 @@ list_client = []
 num_token = os.get("num_tokens")
 endpoint = os.getenv("endpoint")
 model_name = os.getenv("model_name")
-for i in range(num_token):
+for i in range(int(num_token)):
     name_var_env = f"token_{i+1}"
     token = os.getenv(name_var_env)
     client_instance = OpenAI(
