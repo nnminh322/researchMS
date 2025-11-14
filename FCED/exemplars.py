@@ -11,7 +11,7 @@ import itertools
 import os
 
 list_client = []
-num_token = os.get("num_tokens")
+num_token = os.getenv("num_tokens")
 endpoint = os.getenv("endpoint")
 model_name = os.getenv("model_name")
 for i in range(int(num_token)):
