@@ -96,6 +96,7 @@ def api_call(input_prompt: str):
                     }
                 ]
             )
+            print(f"-----Call api with request: {input_prompt}-----\n")
             content = completion.choices[0].message.content
             # content = "[" + content.split("[")[-1].split("]")[0] + "]"
             content = '["' + content.split("[")[-1].split("]")[0] + '"]'
