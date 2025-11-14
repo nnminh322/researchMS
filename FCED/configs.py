@@ -38,7 +38,7 @@ def parse_arguments():
     parser.add_argument('--period', type=int, default=10)
     parser.add_argument('--epochs', default=20, type=int) 
     parser.add_argument('--batch-size', default=4, type=int)
-    parser.add_argument('--device', default="cuda:2", help='set device cuda or cpu')
+    parser.add_argument('--device', default="cuda:0", help='set device cuda or cpu')
     parser.add_argument('--log', action='store_true') 
     parser.add_argument('--log-name', default='temp')
     parser.add_argument('--data-root', default='./data_incremental', type=str)
