@@ -88,6 +88,7 @@ def api_call(input_prompt: str):
                     }
                 ]
             )
+            print(f"-----input: {input_prompt}------\n \n")
             print(f"-----Successfully call api with response: {completion}-----\n")
             
             content = completion.choices[0].message.content
